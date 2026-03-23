@@ -1,73 +1,152 @@
-# React + TypeScript + Vite
+# 🚀 Project Tracker UI (Frontend Engineering Assessment)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance project management frontend application built using **React + TypeScript**.
+This project demonstrates advanced frontend engineering concepts including custom drag-and-drop, virtual scrolling, multi-view architecture, and URL-synced state.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🔗 Live Demo
 
-## React Compiler
+👉 https://your-project.vercel.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📂 GitHub Repository
 
-## Expanding the ESLint configuration
+👉 https://github.com/Shiprakumari123/project-tracker
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📸 Application Preview
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+![Project UI](./screenshot.png)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🚀 Lighthouse Performance Report
+
+![Lighthouse Score](./lighthouse.png)
+
+**Scores:**
+
+* Performance: 100
+* Accessibility: 96
+* Best Practices: 100
+* SEO: 100
+
+---
+
+## 🛠️ Tech Stack
+
+* React + TypeScript
+* Zustand (State Management)
+* Tailwind CSS
+* Vite
+
+---
+
+## ✨ Features
+
+### 📊 Multi-View System
+
+* Kanban Board (To Do, In Progress, In Review, Done)
+* List View (Sortable + Virtual Scrolling)
+* Timeline View (Gantt-style visualization)
+
+---
+
+### 🧲 Custom Drag-and-Drop (No Libraries)
+
+* Built using native browser events
+* Smooth drag with visual feedback
+* Placeholder handling to avoid layout shift
+* Snap-back on invalid drop
+* Works on mouse and touch devices
+
+---
+
+### ⚡ Virtual Scrolling (500+ Tasks)
+
+* Renders only visible rows + buffer
+* Maintains scroll height
+* Smooth performance with no lag
+
+---
+
+### 🔍 Filters with URL Sync
+
+* Multi-select filters (status, priority, assignee)
+* Date range filtering
+* URL query parameters sync
+* Back navigation restores state
+
+---
+
+### 👥 Live Collaboration Simulation
+
+* Simulated users moving across tasks
+* Avatar indicators on task cards
+* Real-time-like updates
+
+---
+
+## 📦 Data Handling
+
+* Custom data generator for 500+ tasks
+* Data persisted using localStorage
+
+---
+
+## ⚙️ Setup Instructions
+
+```bash
+git clone https://github.com/Shiprakumari123/project-tracker.git
+cd project-tracker
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Build & Preview
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build
+npm run preview
 ```
+
+---
+
+## 🧠 Key Engineering Decisions
+
+* Zustand used for simple and scalable global state
+* Custom drag-and-drop for full control over UI behavior
+* Virtual scrolling implemented manually for performance
+* URL-based filters for shareable and bookmarkable state
+
+---
+
+## ⚠️ Constraints Followed
+
+* No drag-and-drop libraries
+* No virtual scrolling libraries
+* No UI component libraries
+* Built completely from scratch
+
+---
+
+## 🔮 Future Improvements
+
+* Accessibility improvements (keyboard navigation)
+* Backend integration for real-time collaboration
+* Mobile responsiveness
+
+---
+
+## 👩‍💻 Author
+
+**Shipra Kumari**
+
+---
+
+## 📌 Note
+
+This project was developed as part of a frontend technical assessment focusing on performance, UI engineering, and scalable architecture.
